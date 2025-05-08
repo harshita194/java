@@ -9,18 +9,11 @@ class sum_till_single_digit{
             digit = n%10;
             n/=10;
             sum += digit;
-        }
-        if(sum<=9){
-            System.out.println(sum);
-        }
-        else{
-            int ans = 0;
-            while(sum !=0){
-                int s_digit = sum%10;
-                sum/=10;
-                ans += s_digit;
+            if(sum >9 && n==0){
+                n= sum;
+                sum = 0;
             }
-            System.out.println(ans);
         }
+        System.out.println(sum);
     }
 }
